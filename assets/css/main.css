@@ -362,8 +362,32 @@ h6 {
 }
 
 #prof{
-  height: 150px;
-  width: 150px;
+  height: 130px;
+  width: 130px;
+}
+
+#btn {
+  background-color: #333; /* Green background */
+  border: none; /* Remove borders */
+  color: white; /* White text */
+  padding: 10px 32px; /* Add some padding */
+  text-align: center; /* Center the text */
+  text-decoration: none; /* Remove underline */
+  display: inline-block; /* Get it to line up with other elements */
+  font-size: 16px; /* Increase the font size */
+  margin: 4px 2px; /* Add some margin */
+  cursor: pointer; /* Add a pointer cursor on hover */
+  border-radius: 8px; /* Rounded corners */
+  transition-duration: 0.4s; /* Make it smooth */
+  position: relative;
+  left: 50px;
+  bottom: 10px;
+}
+
+#btn:hover {
+  background-color: #149ddd; /* White background on hover */
+  color: white; /* Black text on hover */
+  border: 2px solid #4CAF50; /* Green border on hover */
 }
 
 /*--------------------------------------------------------------
