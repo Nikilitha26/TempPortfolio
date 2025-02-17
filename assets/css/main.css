@@ -896,6 +896,15 @@ section,
   margin-right: 0;
 }
 
+#linki{
+  font-size: 2px;
+}
+
+#imgg{
+  height: 320px;
+  width: 400px;
+}
+
 @media (max-width: 575px) {
   .portfolio .portfolio-filters li {
     font-size: 14px;
