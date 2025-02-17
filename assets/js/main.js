@@ -227,3 +227,34 @@
   document.addEventListener('scroll', navmenuScrollspy);
 
 })();
+
+
+document.getElementById('contact-form').addEventListener('submit', function(event) {
+  event.preventDefault();
+  const form = event.target;
+  const data = new FormData(form);
+  const action = form.action;
+
+  fetch(action, {
+      method: 'POST',
+      body: data,
+      headers: {
+          'Accept': 'application/json'
+      }
+  }).then(response => response.json())
+  .then(data => {
+      if (data.ok) {
+          form.querySelector('.sent-message').style.display = 'block';
+          form.querySelector('.error-message').style.display = 'none';
+          form.reset();
+      } else {
+          form.querySelector('.error-message').innerText = "Oops! There was a problem submitting your form";
+          form.querySelector('.error-message').style.display = 'block';
+          form.querySelector('.sent-message').style.display = 'none';
+      }
+  }).catch(error => {
+      form.querySelector('.error-message').innerText = "Oops! There was a problem submitting your form";
+      form.querySelector('.error-message').style.display = 'block';
+      form.querySelector('.sent-message').style.display = 'none';
+  });
+});
